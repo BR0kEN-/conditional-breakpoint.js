@@ -1,0 +1,19 @@
+{
+  "name": "scrollBreakpoint",
+  "main": "scrollBreakpoint.js",
+  "license": "MIT",
+  "version": "1.0",
+  "repository": "BR0kEN-/scrollBreakpoint.js",
+  "homepage": "http://BR0kEN-.github.io/scrollBreakpoint.js",
+  "bugs": "https://github.com/BR0kEN-/scrollBreakpoint.js/issues",
+  "description": "Do an action once - exactly on breakpoint - during scrolling the page.",
+  "author": {
+    "name": "Sergii Bondarenko",
+    "email": "sb@firstvector.org"
+  },
+  "keywords": [
+    "breakpoint",
+    "scroll",
+    "event"
+  ]
+}
