@@ -1,11 +1,11 @@
 {
-  "name": "scrollBreakpoint",
-  "main": "scrollBreakpoint.js",
+  "name": "scroll-breakpoint",
+  "main": "scroll-breakpoint.js",
   "license": "MIT",
-  "version": "1.0",
-  "repository": "BR0kEN-/scrollBreakpoint.js",
-  "homepage": "http://BR0kEN-.github.io/scrollBreakpoint.js",
-  "bugs": "https://github.com/BR0kEN-/scrollBreakpoint.js/issues",
+  "version": "1.0.0",
+  "repository": "BR0kEN-/scroll-breakpoint.js",
+  "homepage": "http://BR0kEN-.github.io/scroll-breakpoint.js",
+  "bugs": "https://github.com/BR0kEN-/scroll-breakpoint.js/issues",
   "description": "Do an action once - exactly on breakpoint - during scrolling the page.",
   "author": {
     "name": "Sergii Bondarenko",

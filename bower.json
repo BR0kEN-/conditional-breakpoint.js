@@ -1,7 +1,7 @@
 {
-  "name": "scrollBreakpoint",
+  "name": "scroll-breakpoint",
   "description": "Do an action once - exactly on breakpoint - during scrolling the page.",
-  "main": "scrollBreakpoint.js",
+  "main": "scroll-breakpoint.js",
   "authors": [
     {
       "name": "Sergii Bondarenko",
@@ -14,7 +14,7 @@
     "scroll",
     "event"
   ],
-  "homepage": "https://github.com/BR0kEN-/scrollBreakpoint.js",
+  "homepage": "https://github.com/BR0kEN-/scroll-breakpoint.js",
   "ignore": [
     "**/.*",
     "node_modules",

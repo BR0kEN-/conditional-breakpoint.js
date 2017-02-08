@@ -1,4 +1,4 @@
-# scrollBreakpoint.js
+# scroll-breakpoint.js
 
 Plugin aimed for reducing the overhead on a client side for `scroll` event handling. In most cases we have to do some actions on exact breakpoint and continue scrolling the page, but many developers forget to check that actions has been performed and repeating them on every single event.
 
@@ -24,6 +24,6 @@ window.addEventListener('scroll', function() {
 });
 ```
 
-The result of two samples above will be completely the same. Customer will not see the difference. But in the first case, class to the `body` will be added as soon as page will be scrolled to 500 pixels or below and removed when scroll location will be above of this height. In second one - the same actions will be performed every f***ing scroll. [Check the demonstration](http://BR0kEN-.github.io/scrollBreakpoint.js) and see by yourself.
+The result of two samples above will be completely the same. Customer will not see the difference. But in the first case, class to the `body` will be added as soon as page will be scrolled to 500 pixels or below and removed when scroll location will be above of this height. In second one - the same actions will be performed every f***ing scroll. [Check the demonstration](http://BR0kEN-.github.io/scroll-breakpoint.js) and see by yourself.
 
 ![Demonstration](docs/screenshots/demo.png)
