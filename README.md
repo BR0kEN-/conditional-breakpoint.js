@@ -25,3 +25,5 @@ window.addEventListener('scroll', function() {
 ```
 
 The result of two samples above will be completely the same. Customer will not see the difference. But in the first case, class to the `body` will be added as soon as page will be scrolled to 500 pixels or below and removed when scroll location will be above of this height. In second one - the same actions will be performed every f***ing scroll. [Check the demonstration](http://BR0kEN-.github.io/scrollBreakpoint.js) and see by yourself.
+
+![Demonstration](docs/screenshots/demo.png)
