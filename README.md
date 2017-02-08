@@ -2,6 +2,20 @@
 
 Plugin aimed for reducing the overhead on a client side for `scroll` event handling. In most cases we have to do some actions on exact breakpoint and continue scrolling the page, but many developers forget to check that actions has been performed and repeating them on every single event.
 
+## Installation
+
+### Bower
+
+```shell
+bower install scroll-breakpoint
+```
+
+### NPM
+
+```shell
+npm install scroll-breakpoint
+```
+
 ## Usage
 
 Let's add the `sticky-header` class to the `body` element as soon as scroll position will be below of 500 pixels and remove it otherwise.
