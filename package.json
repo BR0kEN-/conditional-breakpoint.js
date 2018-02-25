@@ -3,19 +3,27 @@
   "main": "conditional-breakpoint.js",
   "license": "MIT",
   "version": "1.0.0",
-  "repository": "BR0kEN-/conditional-breakpoint.js",
-  "homepage": "http://BR0kEN-.github.io/conditional-breakpoint.js",
-  "bugs": "https://github.com/BR0kEN-/conditional-breakpoint.js/issues",
-  "description": "Do an action once - exactly on breakpoint - during scrolling/resizing the page.",
-  "author": {
-    "name": "Sergii Bondarenko",
-    "email": "sb@firstvector.org"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BR0kEN-/conditional-breakpoint.js.git"
   },
+  "homepage": "http://BR0kEN-.github.io/conditional-breakpoint.js",
+  "bugs": {
+    "url": "https://github.com/BR0kEN-/conditional-breakpoint.js/issues"
+  },
+  "description": "Do an action once - exactly on breakpoint - during scrolling/resizing the page.",
+  "author": "Sergii Bondarenko <sb@firstvector.org>",
   "keywords": [
     "breakpoint",
     "condition",
     "scroll",
     "resize",
     "event"
-  ]
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
