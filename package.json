@@ -1,19 +1,21 @@
 {
-  "name": "scroll-breakpoint",
-  "main": "scroll-breakpoint.js",
+  "name": "conditional-breakpoint",
+  "main": "conditional-breakpoint.js",
   "license": "MIT",
   "version": "1.0.0",
-  "repository": "BR0kEN-/scroll-breakpoint.js",
-  "homepage": "http://BR0kEN-.github.io/scroll-breakpoint.js",
-  "bugs": "https://github.com/BR0kEN-/scroll-breakpoint.js/issues",
-  "description": "Do an action once - exactly on breakpoint - during scrolling the page.",
+  "repository": "BR0kEN-/conditional-breakpoint.js",
+  "homepage": "http://BR0kEN-.github.io/conditional-breakpoint.js",
+  "bugs": "https://github.com/BR0kEN-/conditional-breakpoint.js/issues",
+  "description": "Do an action once - exactly on breakpoint - during scrolling/resizing the page.",
   "author": {
     "name": "Sergii Bondarenko",
     "email": "sb@firstvector.org"
   },
   "keywords": [
     "breakpoint",
+    "condition",
     "scroll",
+    "resize",
     "event"
   ]
 }

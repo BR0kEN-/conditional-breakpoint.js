@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>window.conditionalBreakpoint</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100%;
+    }
+    .flex {
+      display: flex;
+    }
+    .page {
+      height: 100vh;
+      justify-content: center;
+    }
+    .container {
+      height: inherit;
+      position: fixed;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #message {
+      color: #fff;
+      padding: 5px 10px;
+      position: fixed;
+      text-align: center;
+      background: rgba(0, 0, 0, .8);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+<div class="page flex">
+  <div class="container flex">
+    <div id="message"></div>
+  </div>
+</div>
+
+<script src="../conditional-breakpoint.js"></script>
+<script>
+  (function(breakpoint) {
+    document.body.style.height = (breakpoint * 10) + 'px';
+    document.getElementById('message').innerHTML = 'Scroll/resize the page below/above of ' + breakpoint + ' pixels.<br />Do not forget to open developer tools.';
+
+    // Right way.
+    window.conditionalBreakpoint.resize(function() {
+      return this.innerWidth > breakpoint;
+    }, function(isTrue) {
+      console.warn(
+        'conditionalBreakpoint.js: the window is ' + (isTrue ? 'BIGGER' : 'SMALLER') + ' than ' + breakpoint + ' pixels.',
+        'Perform the logic and calmly continue resizing.'
+      );
+    });
+
+    // Wrong way.
+    window.addEventListener('resize', function() {
+      var isTrue = this.innerWidth > breakpoint;
+
+      console.warn(
+        'window.onresize: the window is ' + (isTrue ? 'BIGGER' : 'SMALLER') + ' than ' + breakpoint + ' pixels.',
+        'Just take a look how many times your code executes when you are doing this way...'
+      );
+    });
+
+    // Right way.
+    window.conditionalBreakpoint.scroll(function() {
+      return this.scrollY > breakpoint;
+    }, function(isTrue) {
+      console.info(
+        'conditionalBreakpoint.js: you are ' + (isTrue ? 'BELOW' : 'ABOVE') + ' of ' + breakpoint + ' pixels.',
+        'Perform the logic and calmly continue scrolling.'
+      );
+    });
+
+    // Wrong way.
+    window.addEventListener('scroll', function() {
+      var isTrue = this.scrollY > breakpoint;
+
+      console.warn(
+        'window.onscroll: you are ' + (isTrue ? 'BELOW' : 'ABOVE') + ' of ' + breakpoint + ' pixels.',
+        'Just take a look how many times your code executes when you are doing this way...'
+      );
+    });
+  })(500);
+</script>
+</body>
+</html>
