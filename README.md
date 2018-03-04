@@ -2,6 +2,10 @@
 
 Plugin aimed at reducing the overhead on a client side in the handling of `scroll` and `resize` events. In most cases we have to do some actions on an exact breakpoint and continue scrolling/resizing the page, but many developers forget to check that actions have been performed and repeating them on every single event occasion.
 
+## Browsers support
+
+Every browser that has `window.addEventListener()` is supported (IE9+).
+
 ## Installation
 
 ### Bower
