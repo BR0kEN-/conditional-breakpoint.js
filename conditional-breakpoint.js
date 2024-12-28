@@ -1,30 +1,37 @@
-(function(window) {
+(function (window) {
   'use strict';
 
-  var getHandler = function(eventName) {
-    /**
-     * @param {Function} conditionCallback
-     * @param {Function} actionCallback
-     */
-    return function(conditionCallback, actionCallback) {
-      var ready = true;
+  /**
+   * @template {'resize'|'scroll'} E
+   *
+   * @param {E} eventName
+   *
+   * @return {
+   *   (
+   *     condition: (this: Window) => boolean,
+   *     action: (this: Window, ready: boolean, event: GlobalEventHandlersEventMap[E]) => void
+   *   ) => void
+   * }
+   */
+  function getHandler(eventName) {
+    return function(condition, action) {
+      let ready = true;
 
-      window.addEventListener(eventName, function() {
-        if (conditionCallback.call(this)) {
+      window.addEventListener(eventName, function (event) {
+        if (condition.call(this)) {
           if (ready) {
-            actionCallback.call(this, ready);
+            action.call(this, ready, event);
             ready = !ready;
           }
-        }
-        else {
+        } else {
           if (!ready) {
-            actionCallback.call(this, ready);
+            action.call(this, ready, event);
             ready = !ready;
           }
         }
       });
     };
-  };
+  }
 
   window.conditionalBreakpoint = Object.create(null);
   window.conditionalBreakpoint.resize = getHandler('resize');
