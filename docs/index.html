@@ -49,7 +49,7 @@
     window.conditionalBreakpoint.resize(function() {
       return this.innerWidth > breakpoint;
     }, function(isTrue) {
-      console.warn(
+      console.info(
         'conditionalBreakpoint.js: the window is ' + (isTrue ? 'BIGGER' : 'SMALLER') + ' than ' + breakpoint + ' pixels.',
         'Perform the logic and calmly continue resizing.'
       );
